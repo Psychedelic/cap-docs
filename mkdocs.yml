@@ -1,10 +1,10 @@
-site_name: "Documentation | Plug"
-site_author: plugwallet.ooo
-site_description: Plug is a browser crypto wallet extension that allows you to access your ICP, Cycles, and other tokens as well as log into IC apps with one click.
-site_url: https://docs.plugwallet.ooo/
-copyright: '© 2021 Built by Fleek'
-repo_name: psychedelic/plug
-repo_url: https://github.com/psychedelic/plug
+site_name: "Documentation | DAB"
+site_author: dab.ooo
+site_description: All the data an IC app needs to make seamless experiences, accessible directly on the IC. Canister, NFT, Token, and Dapp registries & lists.
+site_url: https://docs.dab.ooo/
+copyright: '© 2021 Built by Fleek LLC'
+repo_name: psychedelic/dab
+repo_url: https://github.com/psychedelic/dab
 theme:
   name: material
   custom_dir: overrides
@@ -23,40 +23,32 @@ markdown_extensions:
   - toc:
       permalink: true
 nav:
-  - Welcome to Plug 👋: index.md
-  - <b>Developer Guides</b> 🧰: "#"
-  - Getting Started: getting-started/connect-to-plug/#browser-extension
-  - Connect apps to Plug: getting-started/connect-to-plug/#requestconnectrequestconnectparams
-  - Using the Agent/Actor: getting-started/connect-to-plug/#making-calls-to-canisters-with-plug
-  - Querying Balances: getting-started/connect-to-plug/#requestbalance
-  - Triggering Transfers: getting-started/connect-to-plug/#requesttransferrequesttransferparams
-  - Authentication Button: getting-started/plug-button.md
-  - <b>Custom Assets in Plug</b> 🎨: "#"
-  - Custom Tokens (EXT): getting-started/custom-tokens.md
-  - Non-fungible Tokens (NFTs): getting-started/nfts.md
-  - <b>Build an App Examples</b> 💡: "#"
-  - Buy me a Coffee: build-an-app-examples/build-app-buy-me-a-coffee.md
-  - Plugged (E2E): build-an-app-examples/build-app-plugged.md
-  - NNS Stats: build-an-app-examples/plug-auth-nns.md
-  - Coinflip: "https://2ji5m-raaaa-aaaah-aanoa-cai.raw.ic0.app"  
-  - <b>Resources & FAQs </b> 📚:
-    - FAQs: resources/faq.md
-    - Resource Library: resources/library.md
-    - Common Terms: common-terms/plug-dictionary.md  
+  - Welcome to DAB 👋: index.md
+  - <b>The NFT List</b> 🎨: "#"
+  - Getting Started: nft-list/getting-started.md
+  - Fetching a User's NFTs: nft-list/getting-started/#2-fetching-all-nfts-the-user-owns-getallusernfts
+  - Interacting with NFTs: nft-list/getting-started/#3-interacting-with-nfts-using-nftactor-getusertokens-transfer-details
+  - Current NFT List: "https://github.com/Psychedelic/dab/blob/main/registries/nft/list.json"
+  - Submit an NFT: "https://dab-ooo.typeform.com/nft-list"  
+  - <b>The Canister List</b> 🛢️: "#"
+  - Getting Started: canister-list/getting-started.md
+  - Single-canister Query: canister-list/getting-started/#2-check-a-single-canisters-metadata-in-the-registry-getcanisterinfo
+  - Multi-canister Query: canister-list/getting-started/#3-check-multiple-canisters-metadata-in-the-registry-getmultiplecanisterinfo
+  - Current List: "https://github.com/Psychedelic/dab/blob/main/registries/canister_registry/list.md"
+  - Submit a Canister: "https://dab-ooo.typeform.com/canister-list"    
+  - <b>Developer Tools</b> 💡: "#"
+  - DAB-JS Library: https://github.com/Psychedelic/DAB-js/
+  - Main DAB Repo: https://github.com/Psychedelic/DAB/
+  - <b>Resources</b> 📚:
+    - The Internet Computer: "https://dfinity.org/faq"
     - Disclaimer: resources/disclaimer.md
     - Trademark: resources/trademark.md
     - Privacy: resources/privacy.md
-  - <b>Troubleshooting</b> ❓:  
-    - Troubleshooting Guides: resources/troubleshooting.md
-    - Recovering Sub-accounts: resources/multiple-accounts.md
-    - Migrating Curves: resources/migrating-curve.md    
-    - Depositing Cycles: resources/buying-cycles.md
-    - App Trust & Security: resources/app-trust-and-security.md
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/psychedelic/plug/
+      link: https://github.com/psychedelic/dab/
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/plug_wallet
+      link: https://twitter.com/dab_ooo
     - icon: fontawesome/brands/discord
       link: https://discord.gg/yVEcEzmrgm

@@ -1,57 +1,87 @@
 ---
 date: "1"
 ---
+# Welcome to DAB 👋
 
-![](imgs/plug-welcome.png)
+![](imgs/main.png)
 
-Welcome to Plug's developer documentation. Learn how to integrate Plug into Internet Computer applications to provide **seamless onboardings and transactions with a user's Principal ID wallet**.
-
-Plug is a browser crypto wallet and identity/authentication provider for the Internet Computer, compatible with ICP, and soon with cycles and any Internet Computer token. **[Read our blog to learn all about it!](https://medium.com/plugwallet)**
+Welcome to DAB's documentation. DAB is an open internet service for data on the IC. All the data an IC app needs to make a seamless experience, accessible directly on the IC. DAB is an open internet service for NFT, Token, Canister, and Dapp registries.
 
 
-- Visit [our website](https://plugwallet.ooo) to get Plug's latest version.
-- Visit our community and jam with the team in our [Discord](https://discord.gg/yVEcEzmrgm)
-- Follow us on Twitter to stay updated with [Plug's development](https://twitter.com/plug_wallet).
-
-**Download Plug from browser stores or GitHub**
-- [Chrome & Chromium: Extension Store](https://chrome.google.com/webstore/detail/plug/cfbfdhimifdmdehjmkdobpcjfefblkjm)
-- [Firefox: Add-on Store](https://addons.mozilla.org/en-US/firefox/addon/plug/)
-- [GitHub: All Releases](https://github.com/Psychedelic/plug/releases)
+- Visit [our website](https://dab.ooo)
+- Visit [DAB's main repository](https://github.com/psychedelic/dab)
+- Visit [DAB-js repository](https://github.com/psychedelic/dab-js)
 
 !!! Important
 
-    Plug is currently in Alpha V0.2.1, and is in active development. This version of Plug includes ICP wallet features, basic app-integration/interactions with the IC Provider API, and the PlugAgent for authentication and canister call signing. Consider Plug a hot wallet during its alpha stage, and feel free to contact us via Discord/Twitter to report any issues, enhancement ideas or bugs. Coming next? Cycles integration!
-
-## Migrating Wallet Funds from V0.2.0 to V0.2.1.
-
-**As of V0.2.1, Plug migrated its curve from Ed25519 to SECP256K1**. This means that the cryptographic curve used to import/create identities in Plug (e.g. the curve used to calculate your Principal ID from your seed phrase) is changing.
-
-**Users with a wallet created in Plug V0.2.0 or before need to create a new wallet in this Plug version and migrate their funds**, because they can’t import their old wallet (since the curve change, the seed phrase would output a different Principal ID/key pair).
-
-[Here is a detailed guide on how to do it, and why we did this one-time change.](https://docs.plugwallet.ooo/resources/migrating-curve/)
-
-**If you had no funds in your Plug wallet yet, you can skip this process and just create a new wallet.**
+    DAB is currently in its V0.2.0. This version includes the NFT list and the Canister list. The Token and Dapp list services will follow soon after, but early applications for these lists are still being collected (find the forms in the menu)
 
 
-## Plug's Repositories
-Review Plug's code, submit proposals, or submit issues for the team to review.
+## #️⃣ V0.2.0 - DAB's Current Registries.
 
-- [Plug Extension](https://github.com/Psychedelic/plug)
-- [Plug Controller](https://github.com/Psychedelic/plug-controller)
-- [Plug Inpage Provider](https://github.com/Psychedelic/plug-inpage-provider)
+In v0.2.0, DAB has two registries that developers can integrate with, or submit items to:
 
-## Why Plug? What is different?
-Plug aims to solve several points of friction on the Internet Computer for both developers and users.
+- The NFT List (auto-surface NFTs in apps and multi-standard support).
+- The Canister List (associate metadata to Canister IDs and auto-surface it in UIs)
 
-**For users?** It means having one main wallet (your Principal ID) in your browser to manage all your assets (Cycles/ICP/tokens, NFT's, etc.) and to log into any IC app. No need to worry about having separate wallets for different apps and tokens, or having multiple identities per device/app (like you would when using Internet Identity).
+## 🎨 The NFT List
 
-- Log into IC apps from your browser in one click using the same Principal ID.
-- Manage, send and receive all your IC assets from one place, with one ID.
-- Save contacts (aka name ID's) in a local storage address book. 
+**The NFT list** DAB provides a list of NFTs that apps & developers can **consume to surface new NFTs as they are listed in DAB, instead of manually adding them one by one**.
+
+DAB's NFT list is **standard agnostic** and through the DAB-js library, developers can easily integrate and make calls to any NFT collection on the list regardless of their NFT standard interface (EXT, Departure Labs, etc.), **because in its library DAB wraps all standards into a common javascript interface**.
+
+> Want to submit an NFT collection so its listed in DAB for apps to auto-surface? See below!
+
+### 🧰 Getting Started with DAB - the NFT List
+
+Want to connect your app to **DAB's NFT list** to auto-surface a user's NFT collections and easily integrate multiple assets and standards at once in your UI/app?
+
+To interact with DAB's services you need to use the DAB-js library. Read our documentation or visit the DAB-js repository to get started.
+
+- [Read our getting started guide](https://docs.dab.ooo/nft-list/getting-started/)
+- [DAB-js library - Repository](https://github.com/psychedelic/dab-js)
 
 
-**For developers?** It will help offer seamless web/app experiences on the Internet Computer, handling authentication and wallet connection for their users. The same experience a Dapp user would expect on Ethereum, but built for the Internet Computer.
+### 🖌️ Current NFT List & Making New Submissions
+You can see the current listed NFT collections in the link below. **Want to submit a new NFT collection to the list? Use the form below.**
 
-- Authenticate users, and their balances, in one click with just a Principal ID.
-- Trigger transfers or transaction requests to user's wallets from apps.
-- Query and display a user's balances in the app.
+- [View the current NFT Collection List📜](https://github.com/Psychedelic/dab/blob/main/registries/nft/list.json)
+- [Submit a new NFT to the list 📫](https://dab-ooo.typeform.com/nft-list)
+
+
+## 🛢️ The Canister List
+
+**The Canister List** is a canister registry where you can associate Canister IDs to a metadata profile (name, front-end URL, description, logo...) to make them more discoverable by UIs. 
+
+Apps that show Canister IDs in their UIs/apps can **integrate to the Canister List** to check if that Canister ID has associated metadata, and display it for their users to see in a more descriptive and human-readable way.
+
+- It helps make Canister ID human-readable and identifiable.
+- It helps give users information to judge whether to trust a canister or not
+- It can help in the future to identify duplicates or impersonations.
+
+[**View the Canister Registry Source Code**](https://github.com/Psychedelic/dab/tree/main/registries/canister_registry)
+
+### 🖌️ Submitting/Adding a Canister ID to the Canister List
+
+Want to submit a new Canister ID to the registry to associate metadat to it, and have integrated apps auto-surface it? Use the form below.
+
+- [**Current List**](https://github.com/Psychedelic/dab/blob/main/registries/canister_registry/list.md)
+- [**Submit a new Canister to the list 📫**](https://dab-ooo.typeform.com/canister-list)
+
+For V0.2.0, the review process for submissions is manual and done by the DAB core team; in the future we will automate the process, and migrate to a community-governed and trustless system.
+
+**We are exploring an automated way of adding Canister IDs and their metadata to the registry**. The main issues are confirming the controller is the one submitting it, and then adding a verification layer to avoid duplicates/phishing/impersonation.
+
+### 🧰 Start Integrating DAB's Canister List into your App
+
+To interact with DAB's services you need to use the DAB-js library. Read our documentation or visit the DAB-js repository to get started.
+
+- [Read our getting started guide](https://docs.dab.ooo/canister-list/getting-started/)
+* [**DAB-js library - Repository**](https://github.com/psychedelic/dab-js)
+---
+
+## 📬 Coming Next: Token, and Dapp lists (Early Applications)
+After V0.1.0, we'll be working on token, and Dapp registries. These are still in development, **but we are receiving early submissions to be added to these lists on release**.
+
+- [Token List](https://dab-ooo.typeform.com/token-list)
+- [Dapp List](https://dab-ooo.typeform.com/dapp-list)
