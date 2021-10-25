@@ -26,11 +26,14 @@ nav:
   - Welcome to CAP 👋: index.md
   - <b>Overview</b> 👑: "#"
   - What is CAP?: nft-list/getting-started.md
-  - <b>Integrate CAP to NFT/Token</b> ⚡: "#"
+  - <b>Integrate to NFT/Token</b> ⚡: "#"
   - CAP SDK - Getting Started: canister-list/getting-started.md
+  - Installing CAP in new Project: canister-list/getting-started.md
+  - Migrating Old Project to CAP: canister-list/getting-started.md
   - <b>Show CAP Data in UI/Apps</b> 📜: "#"
   - CAP JS - Getting Started: https://github.com/Psychedelic/DAB-js/
-  - <b>CAP Examples & Standards</b> 🧰: "#"
+  - Surface Asset Histories: https://github.com/Psychedelic/DAB-js/
+  - <b>Examples & Standards</b> 🧰: "#"
   - NFT Example Integration: https://github.com/Psychedelic/DAB-js/
   - Token Example Integration: https://github.com/Psychedelic/DAB-js/
   - DIP-721 Token Standard: https://github.com/Psychedelic/DAB-js/
