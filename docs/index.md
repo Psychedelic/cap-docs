@@ -5,83 +5,71 @@ date: "1"
 
 ![](imgs/mainn.png)
 
-Welcome to DAB's documentation. DAB is an open internet service for data on the IC. All the data an IC app needs to make a seamless experience, accessible directly on the IC. DAB is an open internet service for NFT, Token, Canister, and Dapp registries.
+Welcome to CAP's documentation. CAP is an open internet service providing transaction history & asset provenance for NFT’s & Tokens on the Internet Computer. It solves the huge IC problem that assets don’t have native transaction history, and does so in a scalable, trustless and seamless way so any NFT/Token can integrate with one line of code.
 
-
-- Visit [our website](https://dab.ooo)
-- Visit [DAB's main repository](https://github.com/psychedelic/dab)
-- Visit [DAB-js repository](https://github.com/psychedelic/dab-js)
+CAP provides services to:
+1. NFTs/Tokens developers by giving them a plug-n-play history for their assets.
+2. UIs/Dapps/Sites on the Internet Computer that want to show an asset's history to users.
 
 !!! Important
 
-    DAB is currently in its V0.2.0. This version includes the NFT list and the Canister list. The Token and Dapp list services will follow soon after, but early applications for these lists are still being collected (find the forms in the menu)
+    CAP is currently in development 🚧 and will release in the first week of November. This documentation is a placeholder and overview of the project, and once it is released and open-sourced the technical guides, and documentation will be fully added.
 
 
-## #️⃣ V0.2.0 - DAB's Current Registries.
 
-In v0.2.0, DAB has two registries that developers can integrate with, or submit items to:
-
-- The NFT List (auto-surface NFTs in apps and multi-standard support).
-- The Canister List (associate metadata to Canister IDs and auto-surface it in UIs)
-
-## 🎨 The NFT List
-
-**The NFT list** DAB provides a list of NFTs that apps & developers can **consume to surface new NFTs as they are listed in DAB, instead of manually adding them one by one**.
-
-DAB's NFT list is **standard agnostic** and through the DAB-js library, developers can easily integrate and make calls to any NFT collection on the list regardless of their NFT standard interface (EXT, Departure Labs, etc.), **because in its library DAB wraps all standards into a common javascript interface**.
-
-> Want to submit an NFT collection so its listed in DAB for apps to auto-surface? See below!
-
-### 🧰 Getting Started with DAB - the NFT List
-
-Want to connect your app to **DAB's NFT list** to auto-surface a user's NFT collections and easily integrate multiple assets and standards at once in your UI/app?
-
-To interact with DAB's services you need to use the DAB-js library. Read our documentation or visit the DAB-js repository to get started.
-
-- [Read our getting started guide](https://docs.dab.ooo/nft-list/getting-started/)
-- [DAB-js library - Repository](https://github.com/psychedelic/dab-js)
+- Visit [our website](https://cap.ooo)
+- Read [our announcement](https://medium.com/@cap_ois/db9bdfe9129f?source=friends_link&sk=924b190ea080ed4e4593fc81396b0a7a)
+- Visit [CAP's main repository](#) (Soon!)
+- Visit [CAP-SDK repository](#) (Soon!)
+- Visit [CAP-JS repository](#) (Soon!)
 
 
-### 🖌️ Current NFT List & Making New Submissions
-You can see the current listed NFT collections in the link below. **Want to submit a new NFT collection to the list? Use the form below.**
 
-- [View the current NFT Collection List📜](https://github.com/Psychedelic/dab/blob/main/registries/nft/list.json)
-- [Submit a new NFT to the list 📫](https://dab-ooo.typeform.com/nft-list)
+## 👑 CAP - Certified Asset Provenance
+
+CAP is an open internet service on the Internet Computer that developers can utilize to give their NFT, Token (and soon many more projects) traceability and provenance, with a transaction/history service.
+
+- [Visit the overview section to learn more about how it works.](https://docs.cap.ooo/overview/what-is-cap/)
 
 
-## 🛢️ The Canister List
+## 🧰 Getting Started with CAP - (Soon!)
 
-**The Canister List** is a canister registry where you can associate Canister IDs to a metadata profile (name, front-end URL, description, logo...) to make them more discoverable by UIs. 
+Integrating CAP takes only a couple lines of code using our CAP SDK tool, which facilitates integrating your asset's canister (NFT collection or token) to CAP, spawning a history archive canister for your specific project.
 
-Apps that show Canister IDs in their UIs/apps can **integrate to the Canister List** to check if that Canister ID has associated metadata, and display it for their users to see in a more descriptive and human-readable way.
+### 🛢️ Integrating NFT/Token Canister to CAP to give it a History.
 
-- It helps make Canister ID human-readable and identifiable.
-- It helps give users information to judge whether to trust a canister or not
-- It can help in the future to identify duplicates or impersonations.
+Looking to integrate CAP to an NFT or Token to give it a transaction/activity history in CAP? 
 
-[**View the Canister Registry Source Code**](https://github.com/Psychedelic/dab/tree/main/registries/canister_registry)
+1. Get started with the CAP SDK.
+2. View our example NFT implementation.
+3. View our example Token implementation.
+4. Use our NFT standard, built-in with CAP.
 
-### 🖌️ Submitting/Adding a Canister ID to the Canister List
+### 📈 Integrating CAP to an UI/App to Show an Assets History/Activity.
 
-Want to submit a new Canister ID to the registry to associate metadat to it, and have integrated apps auto-surface it? Use the form below.
+Want to query data from CAP from your UI/App/Dapp website? With CAP you can provide your users with great UI/UX's by:
 
-- [**Current List**](https://github.com/Psychedelic/dab/blob/main/registries/canister_registry/list.md)
-- [**Submit a new Canister to the list 📫**](https://dab-ooo.typeform.com/canister-list)
+Displaying historic data of an asset (e.g. NFT's past sales and transfers); showing transaction history of custom tokens in your platform; or by creating UI's with general asset statistics (consuming all data in CAP!).
 
-For V0.2.0, the review process for submissions is manual and done by the DAB core team; in the future we will automate the process, and migrate to a community-governed and trustless system.
 
-**We are exploring an automated way of adding Canister IDs and their metadata to the registry**. The main issues are confirming the controller is the one submitting it, and then adding a verification layer to avoid duplicates/phishing/impersonation.
+- Get started with the CAP-js library.
+- See our CAP Explorer UI as an example.
 
-### 🧰 Start Integrating DAB's Canister List into your App
 
-To interact with DAB's services you need to use the DAB-js library. Read our documentation or visit the DAB-js repository to get started.
+## 🔌👑 Plug, Crowns, Moonwalkers, and other Early Supporters
 
-- [Read our getting started guide](https://docs.dab.ooo/canister-list/getting-started/)
-* [**DAB-js library - Repository**](https://github.com/psychedelic/dab-js)
----
+We are kickstarting the CAP ecosystem with a group of early projects that will be integrating CAP to give their NFTs/Token projects an activity history!
 
-## 📬 Coming Next: Token, and Dapp lists (Early Applications)
-After V0.1.0, we'll be working on token, and Dapp registries. These are still in development, **but we are receiving early submissions to be added to these lists on release**.
+This list includes the **Crowns NFT project**, which we are developing as a showcase of CAP. 10,000 randomly generated crowns with psychedelic and rare material combinations. Coming soon after CAP's release.
 
-- [Token List](https://dab-ooo.typeform.com/token-list)
-- [Dapp List](https://dab-ooo.typeform.com/dapp-list)
+- [Crowns (NFTs)](https://crowns.ooo)
+- [Moonwalkers (NFTs)](https://twitter.com/ic_gallery)
+- [Portal (NFTs)](https://portal.one/)
+- [DFinance (Tokens)](https://dfinance.ai/)
+- [Cycles Token (Tokens)](https://dank.ooo/xtc/)
+- [ICSnakes (NFTs)](https://xn--4n8h7h.ws/)
+- [ICPSquad (NFTs)](https://twitter.com/ICPSquadNFT)
+
+As for **Plug's integration**, it isn't only to show users the transaction history of tokens/NFTs in their wallet that support Plug.
+
+With CAP, Plug can provide its users with transaction history data regardless of whether the NFT or Token has integrated CAP yet. A partial transaction history will be integrated through Plug in CAP, which will **seed** the information so that users **can always see where the assets in their wallet went, and what happened to them**. When the project decides to fully integrate CAP, it can seamlessly continue this transaction history natively.
