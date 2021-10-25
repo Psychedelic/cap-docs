@@ -4,22 +4,22 @@ date: "1"
 
 # Privacy Policy
 
-DAB is an open internet service for canister, NFT, Token, and Dapp registries/lists any interface can consume, making assets and canisters easily discoverable, with metadata that makes them descriptive and human-readable.
+CAP is an open internet service that provides an activity and transaction history all assets (Token/NFTs/etc...) on the Internet Computer can integrate to.
 
-Its usage **doesn’t imply in any way the collection, processing, usage, or request of personally identifiable information** from its users. It is the user’s responsibility to control, decide, and manage what personal information they will share when interfacing with the Internet Computer through DAB, as DAB doesn’t require any to function, request it in any way, or has access/control over it.
+Its usage **doesn’t imply in any way the collection, processing, usage, or request of personally identifiable information** from its users. It is the user’s responsibility to control, decide, and manage what personal information they will share when interfacing with the Internet Computer through CAP, as CAP doesn’t require any to function, request it in any way, or has access/control over it.
 
-Therefore, we will keep these privacy policies extra simple, because **they only apply to DAB's website and main communication/community channels (Discord, Email, Twitter)**, and we don’t process personal information in those spaces either.
+Therefore, we will keep these privacy policies extra simple, because **they only apply to CAP's website and main communication/community channels (Discord, Email, Twitter)**, and we don’t process personal information in those spaces either.
 
-## DAB & Personal Data
+## CAP & Personal Data
 
-We can simplify DAB's policies regarding personal information in three bullets:
+We can simplify CAP's policies regarding personal information in three bullets:
 
-1. DAB doesn’t collect, process, use, require or disclose personal information.
-2. DAB doesn’t have, or requires, access to personal information of any type.
-3. DAB doesn’t share or sell any type of personal information.
+1. CAP doesn’t collect, process, use, require or disclose personal information.
+2. CAP doesn’t have, or requires, access to personal information of any type.
+3. CAP doesn’t share or sell any type of personal information.
 
 ## Cookie Policy & Website Tracking
-DAB uses Plausible.io Analytics on its website. This analytics provider is privacy-oriented and doesn’t use cookies to provide for basic website usage and anonymous visit analytics. The information provided by this tracker is anonymous, not user-identifiable, and extremely basic (traffic, sources, device type, geography).
+CAP uses Plausible.io Analytics on its website. This analytics provider is privacy-oriented and doesn’t use cookies to provide for basic website usage and anonymous visit analytics. The information provided by this tracker is anonymous, not user-identifiable, and extremely basic (traffic, sources, device type, geography).
 
 ## Changes to our Privacy Policy
 Our privacy policy might be subject to minor changes in the future, which will be informed correspondingly on this page with an updated revision of the policy.

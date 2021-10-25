@@ -9,7 +9,7 @@ theme:
   name: material
   custom_dir: overrides
   favicon: './imgs/favicon.ico'
-  logo: './imgs/logo.png'
+  logo: './imgs/cap.png'
   font:
     text: 'Open Sans'
 extra_css:
