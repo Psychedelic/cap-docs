@@ -1,9 +1,9 @@
 ---
 date: "1"
 ---
-# Welcome to DAB 👋
+# Welcome to CAP 👋
 
-![](imgs/main.png)
+![](imgs/mainn.png)
 
 Welcome to DAB's documentation. DAB is an open internet service for data on the IC. All the data an IC app needs to make a seamless experience, accessible directly on the IC. DAB is an open internet service for NFT, Token, Canister, and Dapp registries.
 
