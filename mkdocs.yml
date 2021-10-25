@@ -25,14 +25,14 @@ markdown_extensions:
 nav:
   - Welcome to CAP 👋: index.md
   - <b>Overview</b> 👑: "#"
-  - What is CAP?: nft-list/getting-started.md
+  - What is CAP?: overview/what-is-cap.md
   - <b>Integrate to NFT/Token</b> ⚡: "#"
-  - CAP SDK - Getting Started: canister-list/getting-started.md
-  - Installing CAP in new Project: canister-list/getting-started.md
-  - Migrating Old Project to CAP: canister-list/getting-started.md
+  - CAP SDK - Getting Started: integrate-cap/getting-started.md
+  - Using CAP in New Projects: integrate-cap/getting-started.md
+  - Migrating Existing Projects: integrate-cap/getting-started.md
   - <b>Show CAP Data in UI/Apps</b> 📜: "#"
-  - CAP JS - Getting Started: https://github.com/Psychedelic/DAB-js/
-  - Surface Asset Histories: https://github.com/Psychedelic/DAB-js/
+  - CAP JS - Getting Started: surface-data/getting-started.md
+  - Surface Asset Histories: surface-data/getting-started.md
   - <b>Examples & Standards</b> 🧰: "#"
   - NFT Example Integration: https://github.com/Psychedelic/DAB-js/
   - Token Example Integration: https://github.com/Psychedelic/DAB-js/
