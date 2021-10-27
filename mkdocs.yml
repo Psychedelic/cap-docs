@@ -33,10 +33,11 @@ nav:
   - <b>Show CAP Data in UI/Apps</b> 📜: "#"
   - CAP JS - Getting Started: surface-data/getting-started.md
   - Surface Asset Histories: surface-data/getting-started.md
-  - <b>Examples & Standards</b> 🧰: "#"
-  - NFT Example Integration: https://github.com/Psychedelic/DAB-js/
-  - Token Example Integration: https://github.com/Psychedelic/DAB-js/
-  - DIP-721 Token Standard: https://github.com/Psychedelic/DAB-js/
+  - <b>Examples & Resources</b> 🧰: "#"
+  - NFT Example Integration: examples/guides.md
+  - Token Example Integration: examples/guides.md
+  - CAP's Token Standard: examples/guides.md
+  - CAP-js Library: "https://github.com/psychedelic/cap-js"
   - <b>Resources</b> 📚:
     - The Internet Computer: "https://dfinity.org/faq"
     - Disclaimer: resources/disclaimer.md

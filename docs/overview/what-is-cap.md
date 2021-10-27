@@ -4,99 +4,53 @@ date: "1"
 
 # 👑 Overview - What is CAP?
 
-![](https://storageapi.fleek.co/fleek-team-bucket/canregistry.png)
+![](imgs/mainn.png)
 
-Ready to integrate the Canister List to surface metadata for Canister IDs in your UI/App? All right!
+CAP is a standard agnostic open internet service that provides transaction history & asset provenance to assets (NFTs and Tokens) on the IC.
 
-Just like using the NFT List, you will need to use the **[DAB-js library](https://github.com/Psychedelic/DAB-js/)**, which we built to provide a simple plug-n-play way of integrating **all of DAB's registries**. With it, you will:
+It solves the issue that there is **no standard for transaction history/provenance** when it comes to assets (or activity in general) on the Internet Computer in a scalable and trustless way that any project can integrate and that is flexible enough to evolve into **general activity provenance in the future** (recording any type of event for any type of project).
 
-1. Query DAB's Canister Registry to check if a Canister ID has associated metadata.
-2. Receive a metadata object you can surface in the UI.
+At the moment, CAP has **two clear use cases**:
 
-**Remember**, with DAB, you will check if the Canister ID you're querying has associated metadata; if the canister's controller hasn't added the Canister ID and its metadata to the Canister List yet, it won't return information. [Canister controllers can submit new canisters here](https://dab-ooo.typeform.com/canister-list)
+## For NFTs/Token Projects - A History & Provenance Provider 📜
 
----
-## 0. ⚙️ Preparing your environment
+When it comes to NFTs/Tokens on the Internet Computer, CAP is a service that they can integrate to give their assets a **scalable, trustless, and standardized transaction history**.
 
-To pull and install from [@Psychedelic](https://github.com/psychedelic) via the NPM CLI, you'll need:
+Instead of building, maintaining, and scaling a custom transaction history canister infrastructure; a new or existing project can connect their asset's canister to CAP **to access a transaction history seamlessly and start gathering records for their asset's events (mint, transfer, sell, etc..) as the methods themselves are triggered in the NFT/Token canister.**
 
-- A Github account
-- A Github personal access token (you can create a personal acess token [here](https://github.com/settings/tokens))
-- The personal access token with the correct scopes, **repo** and **read:packages** to be granted access to the [GitHub Package Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages).
-- Authentication via `npm login`, using your Github email for the **username** and the **personal access token** as your **password**:
+The records will be gathered and saved in a project-specific history in CAP; and the Token/NFT can still access its own history by calling the NFT/Token's own methods directly (e.g. getTransaction), not needing to call CAP itself. 
 
-Once you have those ready, run:
+Overall, CAP:
 
-```
-npm login --registry=https://npm.pkg.github.com --scope=@Psychedelic
-```
+- Solves the provenance & history issue for assets on the IC.
+- Helps give users the information they want/expect/need easily.
+- Increases trust in the project by giving it provenance.
+- Does so in a standard, scalable, and self-sustainable way.
 
-> **Note:** You only need to configure this once to install the package!
-    On npm login provide your Github email as your username and the Personal access token as the password.
+## For UIs/Apps/Front-ends - A Way to Surface Asset History Data 🔍
 
-You can also setup your npm global settings to fetch from the Github registry everytime it finds a **@Psychdelic** package, find the instructions [here](https://docs.npmjs.com/configuring-your-registry-settings-as-an-npm-enterprise-user).
+Now, on the other hand, for UIs, apps, and front-ends that deal with assets in their experiences; they can integrate to CAP to **surface the transaction history of any asset using CAP**.
 
-⚠️ Alternatively, a token could be passed to the `.npmrc` as `//npm.pkg.github.com/:_authToken=xxxxxx` but we'd like to keep it clean and tokenless.
+CAP's main canister acts as a router to all the histories of all projects integrating CAP; therefore a UI, **instead of having to integrate and call to each asset's history individually**, can use CAP's main canister as a router to access **all the assets transaction history easily**.
 
-## 1. 🧰 Setting up DAB-js in your project
+It provides a cleaner and easier way of giving users visual access to their asset's transaction history and opens the door to amazingly transparent & trust-oriented experiences, like:
 
-First, you need to install the DAB-js **npm package** into your project.
+- Showing an NFT's past sales, owners, and prices on a marketplace.
+- Showing a user historic transactions for more tokens than just ICP.
+- Building UIs & apps that analyze an asset's movements and activity.
 
-You can do so from the command line
-```js
-npm install @psychedelic/dab-js@latest
-```
+## CAP's Architecture - How Does it Work? 🧠
 
-Find more details about installing versions in the package page [here](https://github.com/Psychedelic/DAB-js/packages/987540)
+![](https://storageapi.fleek.co/fleek-team-bucket/Group%2018%20(4).svg)
 
+CAP as an open internet service works the following way. The main canister for CAP acts as an orchestrator that can spawn new history canisters for individual projects (NFTs, Token Canisters).
 
----
+When integrating CAP to their Token/NFT canister (using the CAP SDK), projects will call CAP to spawn a new history canister in CAP that will **only accept transaction submissions from the canister/project** that initialized it.
 
-## 2. 🛢️ Check a Single Canister's Metadata in the Registry (getcanisterInfo)
+In a nutshell, CAP deploys a transaction history infrastructure that **only your project can use**. And once you do so, you can connect your project’s canister by connecting the transaction method to your project’s history canister, automatically passing the transaction records when a transaction/event is executed.
 
-This method allows you to query the DAB canister registry to fetch the metadata for a **specific Canister ID**. You will need to pass:
+Now that your project’s CAP history canister is bustling with transaction data, you can surface that transaction data **directly from your NFT / Token’s canister, using the same methods as before.** 
 
-- `canisterID`: the Canister ID of the canister you want to check in DAB.
-- `agent`: and HttpAgent (instantiated with agent-js or Plug)
+While on the other hand, UIs/Front-ends can integrate CAP using the CAP-js library to consume not just one project's data, but any project using CAP.
 
-
-```ts
-import { getCanisterInfo } from '@psychedelic/dab-js';
-const agent = new HttpAgent();
-const nnsCanisterId = 'ryjl3-tyaaa-aaaaa-aaaba-cai';
-const nnsMetadata = await getCanisterInfo(nnsCanisterId, agent);
-console.log(nnsMetadata);
-```
-
-If the Canister ID has metadata associated in the Canister Registry, it will return a **metadata object**. Else, it will return undefined.
-
-```js
-type CanisterId = Principal | string;
-interface CanisterMetadata {
-  url: string;
-  name: string;
-  description: string;
-  version: number;
-  logo_url: string;
-}
-```
-
-
-## 3. 🛢️🛢️ Check Multiple Canister's Metadata in the Registry (getMultipleCanisterInfo)
-
-This second method is a variation that allows you to query DAB to check the metadata of **multiple canisters at once**. The main differences is that you will pass:
-
-- `canisterIDs`: An array of **several canister IDs** of the canisters you want to check in DAB.
-- `agent`: and HttpAgent (instantiated with agent-js or Plug).
-
-```ts
-import { getMultipleCanisterInfo } from '@psychedelic/dab-js';
-
-const agent = HttpAgent();
-const canisterIds = ['e3izy-jiaaa-aaaah-qacbq-cai', 'qcg3w-tyaaa-aaaah-qakea-cai']; // Cronic + ICPunks
-const nftsInfo = await getMultipleCanisterInfoFromDab(canisterIds, agent);
-console.log(nftsInfo);
-```
-
-
-In contrast to the previous method, this will return an **array of metadata objects** for all the canister IDs you entered.
+> As of V1, CAP's spawned history canisters can hold up to 400,000 transactions on the conservative side; and in the following update we will implement scaling, following the same approach implemented in [Dank's Cycles Token (XTC)](https://medium.com/dank-ois/cycles-token-xtc-update-history-scaling-239778df2ad2).

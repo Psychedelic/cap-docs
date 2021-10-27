@@ -19,7 +19,7 @@ CAP provides services to:
 
 - Visit [our website](https://cap.ooo)
 - Read [our announcement](https://medium.com/@cap_ois/db9bdfe9129f?source=friends_link&sk=924b190ea080ed4e4593fc81396b0a7a)
-- Visit [CAP's main repository](#) (Soon!)
+- Visit [CAP's main repository](https://github.com/psychedelic/cap) (In development)
 - Visit [CAP-SDK repository](#) (Soon!)
 - Visit [CAP-JS repository](#) (Soon!)
 
