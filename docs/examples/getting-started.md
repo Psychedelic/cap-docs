@@ -1,8 +1,8 @@
 ---
 date: "1"
 ---
-
 # 👑 Guides & Examples - CAP
+## 👑 Guides & Examples - CAP
 
 Soon, on CAP's release (first week of November), we will share in-detail guides and example integrations of CAP:
 

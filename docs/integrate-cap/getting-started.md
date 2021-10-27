@@ -1,8 +1,8 @@
 ---
 date: "1"
 ---
-
 # 👑 Integrating CAP - New & Existing Projects
+## 👑 Integrating CAP - New & Existing Projects
 
 Soon, on CAP's release (first week of November), we will share in-detail guides and documentation on how to integrate CAP to:
 
