@@ -55,3 +55,7 @@ Now that your project’s CAP history canister is bustling with transaction data
 While on the other hand, UIs/Front-ends can integrate CAP using the CAP-js library to consume not just one project's data, but any project using CAP.
 
 > As of V1, CAP's spawned history canisters can hold up to 400,000 transactions on the conservative side; and in the following update we will implement scaling, following the same approach implemented in [Dank's Cycles Token (XTC)](https://medium.com/dank-ois/cycles-token-xtc-update-history-scaling-239778df2ad2).
+
+
+## Early Data Redundancy Off-chain 🗄️
+We also know that it is early on the Internet Computer ecosystem, and for CAP as well when it releases, so on release CAP will backup data off-chain as extra redundancy, and at no cost. To ensure we can be ready and fail-safe.
