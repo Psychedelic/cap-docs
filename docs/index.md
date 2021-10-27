@@ -20,21 +20,21 @@ CAP provides services to:
 - Visit [our website](https://cap.ooo)
 - Read [our announcement](https://medium.com/@cap_ois/db9bdfe9129f?source=friends_link&sk=924b190ea080ed4e4593fc81396b0a7a)
 - Visit [CAP's main repository](https://github.com/psychedelic/cap) (In development)
-- Visit [CAP-SDK repository](#) (Soon!)
-- Visit [CAP-JS repository](#) (Soon!)
+- Visit [CAP-SDK repository](#) (Early look)
+- Visit [CAP-JS repository](#) (Early look)
 
 
 
 ## 👑 CAP - Certified Asset Provenance
 
-CAP is an open internet service on the Internet Computer that developers can utilize to give their NFT, Token (and soon many more projects) traceability and provenance, with a transaction/history service.
+CAP is an open internet service on the Internet Computer that developers can utilize to give their NFT, Token (and soon many more NFTs/Tokens) traceability and provenance, with a transaction/history service.
 
 - [Visit the overview section to learn more about how it works.](https://docs.cap.ooo/overview/what-is-cap/)
 
 
 ## 🧰 Getting Started with CAP - (Soon!)
 
-Integrating CAP takes only a couple lines of code using our CAP SDK tool, which facilitates integrating your asset's canister (NFT collection or token) to CAP, spawning a history archive canister for your specific project.
+Integrating CAP takes only a couple lines of code using our CAP SDK tool, which facilitates integrating your asset's canister (NFT collection or token) to CAP, spawning a history archive canister for your specific Token or NFT.
 
 ### 🛢️ Integrating NFT/Token Canister to CAP to give it a History.
 
@@ -56,13 +56,10 @@ Displaying historic data of an asset (e.g. NFT's past sales and transfers); show
 - See our CAP Explorer UI as an example.
 
 
-## 🔌👑 Plug, Crowns, Moonwalkers, and other Early Supporters
+## 🔌👑 Plug, Moonwalkers, and other Early Supporters
 
-We are kickstarting the CAP ecosystem with a group of early projects that will be integrating CAP to give their NFTs/Token projects an activity history!
+We are kickstarting the CAP ecosystem with a group of early Tokens & NFTs that will be integrating CAP to give their NFTs/Token an activity history!
 
-This list includes the **Crowns NFT project**, which we are developing as a showcase of CAP. 10,000 randomly generated crowns with psychedelic and rare material combinations. Coming soon after CAP's release.
-
-- [Crowns (NFTs)](https://crowns.ooo)
 - [Moonwalkers (NFTs)](https://twitter.com/ic_gallery)
 - [Portal (NFTs)](https://portal.one/)
 - [DFinance (Tokens)](https://dfinance.ai/)
@@ -70,6 +67,6 @@ This list includes the **Crowns NFT project**, which we are developing as a show
 - [ICSnakes (NFTs)](https://xn--4n8h7h.ws/)
 - [ICPSquad (NFTs)](https://twitter.com/ICPSquadNFT)
 
-As for **Plug's integration**, it isn't only to show users the transaction history of tokens/NFTs in their wallet that support Plug.
+As for **Plug's integration**, it isn't only to show users the transaction history of tokens/NFTs in their wallet that support Plug. With CAP, Plug can provide its users with transaction history data regardless of whether the NFT or Token has integrated CAP yet.
 
-With CAP, Plug can provide its users with transaction history data regardless of whether the NFT or Token has integrated CAP yet. A partial transaction history will be integrated through Plug in CAP, which will **seed** the information so that users **can always see where the assets in their wallet went, and what happened to them**. When the project decides to fully integrate CAP, it can seamlessly continue this transaction history natively.
+A partial transaction history will be integrated through Plug in CAP, which will **seed** the information so that users **can always see where the assets in their wallet went, and what happened to them**. When the NFT/Token decides to fully integrate CAP, it can seamlessly continue this transaction history natively.
