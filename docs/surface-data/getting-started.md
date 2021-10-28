@@ -5,9 +5,10 @@ date: "1"
 
 ## 👑 Surface Provenance Data - UIs & Front-ends
 
-Soon, on CAP's release (first week of November), we will share in-detail guides and documentation on how to integrate CAP into UIs/Frontends to:
+UIs and apps will be able to query any Token or NFTs (that uses CAP) transaction history and surface it for its users. This will be done using the **CAP-js library**, that will allow any frontend to communicate with CAP's main canister to query data from any integrated asset.
 
-- Surface any transactions/history for assets using CAP.
-- Surface any transaction data related to users/specific assets.
+- Visit [CAP-js repository](https://github.com/Psychedelic/cap-js) (Early look)
 
-This will be done using the CAP-js library, that will allow any frontend to communicate with CAP's main canister to query data from any integrated asset.
+!!! Important
+
+    CAP is currently in development 🚧 and will release in the first week of November, thus it is not on mainnet or usable yet. You might see our documentation is light! We're delayed in this to focus on testing, but will soon update this page with guides & detailed examples for developers.

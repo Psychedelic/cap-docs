@@ -13,15 +13,15 @@ CAP provides services to:
 
 !!! Important
 
-    CAP is currently in development 🚧 and will release in the first week of November. This documentation is a placeholder and overview of the project, and once it is released and open-sourced the technical guides, and documentation will be fully added.
+    CAP is currently in development 🚧 and will release in the first week of November, thus it is not on mainnet or usable yet. You might see our documentation is light! We're delayed in this to focus on testing, but will soon update this page with guides & detailed examples for developers.
 
 
 
 - Visit [our website](https://cap.ooo)
 - Read [our announcement](https://medium.com/@cap_ois/db9bdfe9129f?source=friends_link&sk=924b190ea080ed4e4593fc81396b0a7a)
-- Visit [CAP's main repository](https://github.com/psychedelic/cap) (In development)
-- Visit [CAP-SDK repository](#) (Early look)
-- Visit [CAP-JS repository](#) (Early look)
+- Visit [CAP's main repository](https://github.com/psychedelic/cap) (Early look)
+- Visit [CAP-SDK repository](https://github.com/Psychedelic/cap/tree/cap-sdk/sdk) (Early look)
+- Visit [CAP-JS repository](https://github.com/psychedelic/cap-js) (Early look)
 
 
 
@@ -34,7 +34,11 @@ CAP is an open internet service on the Internet Computer that developers can uti
 
 ## 🧰 Getting Started with CAP - (Soon!)
 
-Integrating CAP takes only a couple lines of code using our CAP SDK tool, which facilitates integrating your asset's canister (NFT collection or token) to CAP, spawning a history archive canister for your specific Token or NFT.
+CAP as an open internet service works the following way. The main canister for CAP acts as an orchestrator that can spawn new history canisters for individual projects (NFTs, Token Canisters, DEX's, etc.).
+
+!!! Important
+
+    CAP is currently in development 🚧 and not live yet on mainnet. This documentation is a placeholder until the release on the first week of November, when we will complete the guides/examples.
 
 ### 🛢️ Integrating NFT/Token Canister to CAP to give it a History.
 
@@ -56,7 +60,7 @@ Displaying historic data of an asset (e.g. NFT's past sales and transfers); show
 - See our CAP Explorer UI as an example.
 
 
-## 🔌👑 Plug, Moonwalkers, and other Early Supporters
+## 👑 Moonwalkers, Portal, and other Early Supporters
 
 We are kickstarting the CAP ecosystem with a group of early Tokens & NFTs that will be integrating CAP to give their NFTs/Token an activity history!
 
@@ -67,6 +71,12 @@ We are kickstarting the CAP ecosystem with a group of early Tokens & NFTs that w
 - [ICSnakes (NFTs)](https://xn--4n8h7h.ws/)
 - [ICPSquad (NFTs)](https://twitter.com/ICPSquadNFT)
 
-As for **Plug's integration**, it isn't only to show users the transaction history of tokens/NFTs in their wallet that support Plug. With CAP, Plug can provide its users with transaction history data regardless of whether the NFT or Token has integrated CAP yet.
+## 🔌 Plug's Integration and Role
 
-A partial transaction history will be integrated through Plug in CAP, which will **seed** the information so that users **can always see where the assets in their wallet went, and what happened to them**. When the NFT/Token decides to fully integrate CAP, it can seamlessly continue this transaction history natively.
+As for **Plug's integration**, it isn't only to show users the transaction history of tokens/NFTs in their wallet that support Plug. 
+
+Plug will also integrate CAP to play an important role in seeding the transaction history for any project that can be held/surfaced in Plug, whether it has already integrated CAP or not.
+
+This way, Plug can create an early activity history for users on their wallet, who will see an activity for any NFT/Token they trade with through Plug. Then, when the NFT/Token fully integrates CAP it will already have some records to populate their history canister.
+
+Still, **we strongly recommend** that projects fully integrate CAP directly into their canisters so all activity across the entire IC will be captured, and not just activity going through Plug.

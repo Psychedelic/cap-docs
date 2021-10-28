@@ -21,18 +21,11 @@ Instead of building, maintaining, and scaling a custom transaction history canis
 
 The records will be gathered and saved in a project-specific history in CAP; and the Token/NFT can still access its own history by calling the NFT/Token's own methods directly (e.g. getTransaction), not needing to call CAP itself. 
 
-Overall, CAP:
-
-- Solves the provenance & history issue for assets on the IC.
-- Helps give users the information they want/expect/need easily.
-- Increases trust in the project by giving it provenance.
-- Does so in a standard, scalable, and self-sustainable way.
-
 ## For UIs/Apps/Front-ends - A Way to Surface Asset History Data 🔍
 
 Now, on the other hand, for UIs, apps, and front-ends that deal with assets in their experiences; they can integrate to CAP to **surface the transaction history of any asset using CAP**.
 
-CAP's main canister acts as a router to all the histories of all projects integrating CAP; therefore a UI, **instead of having to integrate and call to each asset's history individually**, can use CAP's main canister as a router to access **all the assets transaction history easily**.
+CAP's main canister acts as a router to all the histories of all projects integrating CAP; therefore a UI, **instead of having to integrate and call to each asset's history individually (as it happens today)**, can instead use CAP's main canister as a router to access **all the assets transaction history easily**.
 
 It provides a cleaner and easier way of giving users visual access to their asset's transaction history and opens the door to amazingly transparent & trust-oriented experiences, like:
 
@@ -58,4 +51,6 @@ While on the other hand, UIs/Front-ends can integrate CAP using the CAP-js libra
 
 
 ## Early Data Redundancy Off-chain 🗄️
-We also know that it is early on the Internet Computer ecosystem, and for CAP as well when it releases, so on release CAP will backup data off-chain as extra redundancy, and at no cost. To ensure we can be ready and fail-safe.
+We know that it's still early days for the Internet Computer, and for CAP, so on release of CAP, Psychedelic will backup all CAP data off-chain for extra data security/redundancy, and at no cost to CAP or it's users.
+
+In the short-term future we will look into periodically backing up data to Filecoin as well. This is to ensure data can never be lost, even in the unlikely event of an IC upgrade that corrupts data.
