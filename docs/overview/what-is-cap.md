@@ -21,7 +21,7 @@ Instead of building, maintaining, and scaling a custom transaction history canis
 
 The records will be gathered and saved in a project-specific history in CAP; and the Token/NFT can still access its own history by calling the NFT/Token's own methods directly (e.g. getTransaction), not needing to call CAP itself. 
 
-## For UIs/Apps/Front-ends - A Way to Surface Asset History Data 🔍
+## For UIs/Apps - A Way to Surface Asset History Data 🔍
 
 Now, on the other hand, for UIs, apps, and front-ends that deal with assets in their experiences; they can integrate to CAP to **surface the transaction history of any asset using CAP**.
 
@@ -35,7 +35,7 @@ It provides a cleaner and easier way of giving users visual access to their asse
 
 ## CAP's Architecture - How Does it Work? 🧠
 
-![](https://storageapi.fleek.co/fleek-team-bucket/Group%2018%20(4).svg)
+![](imgs/gr.png)
 
 CAP as an open internet service works the following way. The main canister for CAP acts as an orchestrator that can spawn new history canisters for individual projects (NFTs, Token Canisters).
 
