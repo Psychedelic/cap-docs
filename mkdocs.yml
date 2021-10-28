@@ -34,7 +34,6 @@ nav:
   - CAP Main Repo: "https://github.com/psychedelic/cap"
   - CAP SDK Repo: "https://github.com/Psychedelic/cap/tree/cap-sdk/sdk"
   - CAP-js Repo: "https://github.com/psychedelic/cap-js"
-  - Integration Examples: examples/guides.md
   - <b>Resources</b> 📚:
     - The Internet Computer: "https://dfinity.org/faq"
     - Disclaimer: resources/disclaimer.md
