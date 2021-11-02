@@ -1,6 +1,6 @@
-# DAB Documentation
+# CAP's Documentation
 
-Welcome [DAB's](https://dab.ooo/) documentation! All the data an IC app needs to make a seamless experience, accessible directly on the IC. DAB is an open internet service for NFT, Token, Canister, and Dapp registries.
+Welcome [CAP's](https://cap.ooo/) documentation! The open internet service for transaction history and provenance on the Internet Computer.
 
 ## Getting started
 
