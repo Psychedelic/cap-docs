@@ -1,9 +1,9 @@
 ---
 date: "1"
 ---
-# 👑 Surface Provenance Data - UIs & Front-ends
+# 👑 Surface History Data - UIs & Front-ends
 
-## 👑 Surface Provenance Data - UIs & Front-ends
+## 👑 Surface History Data - UIs & Front-ends
 
 UIs and apps will be able to query any Token or NFTs (that uses CAP) transaction history and surface it for its users. This will be done using the **CAP-js library**, that will allow any frontend to communicate with CAP's main canister to query data from any integrated asset.
 
