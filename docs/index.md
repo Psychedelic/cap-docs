@@ -12,10 +12,6 @@ CAP provides services to:
 1. NFTs/Tokens developers by giving them a plug-n-play history for their assets.
 2. UIs/Dapps/Sites on the Internet Computer that want to show an asset's history to users.
 
-!!! Important
-
-    CAP is currently in development 🚧 and will release in the first week of November, thus it is not on mainnet or usable yet. You might see our documentation is light! We're delayed in this to focus on testing, but will soon update this page with guides & detailed examples for developers.
-
 
 - Visit [our website](https://cap.ooo)
 - Read [our announcement](https://medium.com/@cap_ois/db9bdfe9129f?source=friends_link&sk=924b190ea080ed4e4593fc81396b0a7a)
