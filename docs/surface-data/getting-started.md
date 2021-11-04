@@ -19,17 +19,37 @@ UIs and apps will be able to query any Token or NFTs (that uses CAP) transaction
 Before we can get into any of the fun, we need to download the CAP-js library locally.
 
 ### Installing
+
+You'll need to have @Psychedelic Github Package Registry setup to pull and install from [@Psychedelic](https://github.com/psychedelic) via the NPM CLI.  To do so you'll need:
+
+**A [personal access token](https://github.com/psychedelic) with the following scopes selected**
+
+- **repo** → [ full control to private repositories]
+- **read:packages** → [Download packages from GitHub Package Registry]
+- **read:org** → [Read org and team membership, read org projects]
+- Authentication via npm login, using your GitHub username for the username, the personal access token as your password, and your GitHub email as the email address.
+
+Once you have those ready, run:
+
+```js
+npm login --registry=https://npm.pkg.github.com --scope=@Psychedelic
 ```
-yarn add @psychedelic/cap-js 
+
+> Note: You only need to configure this once to install the package! On npm login provide your Github email as your username and the Personal access token as the password.
+
+The last thing we’ve got to do before installing is setting your npm configuration so that when you run ‘npm install @psychedelic/<repo-name-here>’ npm will pull from Github instead of its own registry.
+
+To do this, run:
+
+```js
+npm config set @psychedelic:registry https://npm.pkg.github.com
 ```
 
-The CAP-js module is now installed and ready to be interfaced with.
+You’re all set! You can now install CAP-js by running:
 
-> Note: user’s required to have set the Github registry to get the @psychedelic packages,
-If he has done this at once in the past can skipped this step, otherwise should create a github personal access token (PAT) and execute (npm set //npm.pkg.github.com/:_authToken "$PAT").
-
-
-More details in https://github.com/Psychedelic/cap-explorer#-configure-npm-for-github-package-registry
+```js
+yarn add @psychedelic/cap-js
+```
 
 ## Importing CAP-js
 To interact with CAP-js we are going to need to import two objects into our application; the Router & Root.
