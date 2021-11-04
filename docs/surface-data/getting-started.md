@@ -135,7 +135,7 @@ const getCapRootInstance = async ({
   canisterId,
   host,
 }: {
-  canisterId?: string,
+  canisterId: string,
   host?: string,
 }) => await CapRoot.init({
   host,
@@ -144,7 +144,7 @@ const getCapRootInstance = async ({
 
 // On a short lived section of your application
 (async () => {
-    const capRouter = new getCapRootInstance();{
+    const capRouter = new getCapRootInstance({
         canisterId: 'rrkah-fqaaa-aaaaa-aaaaq-cai',
     });
 })();
