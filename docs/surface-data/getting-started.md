@@ -75,10 +75,7 @@ const getCapRouterInstance = async ({
 
 // On a hypotetical application top-level or entry-point
 (async () => {
-	const capRouter = new getCapRouterInstance({
-		canisterId: 'rrkah-fqaaa-aaaaa-aaaaq-cai',
-		host: 'http://localhost:8000',
-	});
+	const capRouter = new getCapRouterInstance();
 })();
 ```
 
@@ -147,10 +144,9 @@ const getCapRootInstance = async ({
 
 // On a short lived section of your application
 (async () => {
-	const capRouter = new getCapRootInstance({
-		canisterId: 'rrkah-fqaaa-aaaaa-aaaaq-cai',
-		host: 'http://localhost:8000',
-	});
+    const capRouter = new getCapRootInstance();{
+        canisterId: 'rrkah-fqaaa-aaaaa-aaaaq-cai',
+    });
 })();
 ```
 
