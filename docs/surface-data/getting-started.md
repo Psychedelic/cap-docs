@@ -8,6 +8,7 @@ date: "1"
 UIs and apps will be able to query any Token or NFTs (that uses CAP) transaction history and surface it for its users. This will be done using the **CAP-js library**, that will allow any frontend to communicate with CAP's main canister to query data from any integrated asset.
 
 - Visit [CAP-js repository](https://github.com/Psychedelic/cap-js)
+- CAP's Mainnet canister: `lj532-6iaaa-aaaah-qcc7a-cai`
 
 !!! Important
 
