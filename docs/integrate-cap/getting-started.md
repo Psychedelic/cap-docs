@@ -28,8 +28,11 @@ The following guide will take you through creating a sample project (NFT/Token) 
 
 The first step is to create a simple project. Here we will create an **empty Rust project**. Note: this assumes your machine is already set up for IC development. Please make sure you have dfx, ic-optimizer and the wasm target installed on your machine.
 
-```
-cap-sdk= { git = "https://github.com/Psychedelic/cap", branch = "cap-sdk", package="cap-sdk", features = []}
+[Here is an example project you can use as a reference.](https://github.com/Psychedelic/cap-example/tree/jsonsivar/init)
+
+```rust
+cap-sdk = { git = "https://github.com/Psychedelic/cap.git", branch = "cap-sdk" }
+cap-sdk-core = { git = "https://github.com/Psychedelic/cap.git", branch = "cap-sdk" }
 ```
 
 Note, currently it is under development so we are pointing to the **Github version**. Once it is published, you can point directly to the published crate.
@@ -40,14 +43,29 @@ The next step is to create the constructor and add the **root bucket and registe
 
 First, let’s create a constructor for this token so that in it, we will set up the CAP root bucket.
 
-```
-Insert code that shows an empty init function for the canister
+```rust
+#[init]
+fn init(contract: Principal, writers: BTreeSet<Principal>) {
+	
+}
 ```
 
 Then, we will create a canister and register it with the CAP This can be done using the initialization helper in the SDK:
 
-```
-Insert code that shows usage of SDK initialization
+```rust
+fn init(cycles: u64) {
+   let arg = management::CreateCanisterArgument { settings: None };
+   let (res,) = management::CreateCanister::perform_with_payment(
+       Principal::management_canister(),
+       (arg,),
+       cycles,
+   )
+   .await
+   .expect("Failed to create the canister.");
+   let canister_id = res.canister_id;
+ 
+  // … add new sdk function 
+}
 ```
 
 This is required because CAP follows a **hub and spoke architecture**. There is a central canister we call the router that facilitates onboarding of new NFTs/Tokens integrating and the management of CAP.  
