@@ -12,16 +12,12 @@ CAP provides services to:
 1. NFTs/Tokens developers by giving them a plug-n-play history for their assets.
 2. UIs/Dapps/Sites on the Internet Computer that want to show an asset's history to users.
 
-!!! Important
-
-    CAP is currently in development 🚧 and will release in the first week of November, thus it is not on mainnet or usable yet. You might see our documentation is light! We're delayed in this to focus on testing, but will soon update this page with guides & detailed examples for developers.
-
 
 - Visit [our website](https://cap.ooo)
 - Read [our announcement](https://medium.com/@cap_ois/db9bdfe9129f?source=friends_link&sk=924b190ea080ed4e4593fc81396b0a7a)
-- Visit [CAP's main repository](https://github.com/psychedelic/cap) (Early look)
-- Visit [CAP-SDK repository](https://github.com/Psychedelic/cap/tree/cap-sdk/sdk) (Early look)
-- Visit [CAP-JS repository](https://github.com/psychedelic/cap-js) (Early look)
+- Visit [CAP's main repository](https://github.com/psychedelic/cap) 
+- Visit [CAP-SDK repository](https://github.com/Psychedelic/cap/tree/cap-sdk/sdk)
+- Visit [CAP-JS repository](https://github.com/psychedelic/cap-js) 
 
 
 
@@ -32,22 +28,21 @@ CAP is an open internet service on the Internet Computer that developers can uti
 - [Visit the overview section to learn more about how it works.](https://docs.cap.ooo/overview/what-is-cap/)
 
 
-## 🧰 Getting Started with CAP - (Soon!)
+## 🧰 Getting Started with CAP
 
 CAP as an open internet service works the following way. The main canister for CAP acts as an orchestrator that can spawn new history canisters for individual projects (NFTs, Token Canisters, DEX's, etc.).
 
+- CAP's Mainnet canister: `lj532-6iaaa-aaaah-qcc7a-cai`
+
 !!! Important
 
-    CAP is currently in development 🚧 and not live yet on mainnet. This documentation is a placeholder until the release on the first week of November, when we will complete the guides/examples.
+    CAP is currently in early stages 🚧 this documentation will continue to grow with the project!
 
 ### 🛢️ Integrating NFT/Token Canister to CAP to give it a History.
 
 Looking to integrate CAP to an NFT or Token to give it a transaction/activity history in CAP? 
 
-1. Get started with the CAP SDK.
-2. View our example NFT implementation.
-3. View our example Token implementation.
-4. Use our NFT standard, built-in with CAP.
+1. [Get started with the CAP SDK.](https://docs.cap.ooo/integrate-cap/getting-started/)
 
 ### 📈 Integrating CAP to an UI/App to Show an Assets History/Activity.
 
@@ -56,8 +51,7 @@ Want to query data from CAP from your UI/App/Dapp website? With CAP you can prov
 Displaying historic data of an asset (e.g. NFT's past sales and transfers); showing transaction history of custom tokens in your platform; or by creating UI's with general asset statistics (consuming all data in CAP!).
 
 
-- Get started with the CAP-js library.
-- See our CAP Explorer UI as an example.
+- [Get started with the CAP-js library.](https://docs.cap.ooo/surface-data/getting-started/)
 
 
 ## 👑 Moonwalkers, Portal, and other Early Supporters
