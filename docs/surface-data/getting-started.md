@@ -14,6 +14,12 @@ UIs and apps will be able to query any Token or NFTs (that uses CAP) transaction
 
     This is an early version of the documentation! 🚧 for the complete interface you can visit the CAP-js repository above to see more code examples, parameters, and returns for each method. Here we detail the necessary steps based on consuming data for UIs/front-ends.
 
+
+You can also find to quick code-interactive examples to follow as you read this guide on our GitHub:
+
+- [Basic Example - Using CAP-js](https://github.com/Psychedelic/cap-docs/blob/main/examples/basic/src/index.js)
+- [Extended Example- Using CAP-js with Plug](https://github.com/Psychedelic/cap-docs/blob/main/examples/plug/src/index.js)
+
 ## Getting Started - CAP-js
 
 Before we can get into any of the fun, we need to download the CAP-js library locally.
@@ -209,3 +215,4 @@ Allows you to query all available transactions for a specific user (Principal ID
 ```js
 capRoot.get_user_transactions(({page, user, witness})
 ```
+
