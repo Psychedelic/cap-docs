@@ -28,7 +28,7 @@ The following guide will take you through creating a sample project (NFT/Token) 
 
 The first step is to create a simple project. Here we will create an **empty Rust project**. Note: this assumes your machine is already set up for IC development. Please make sure you have dfx, ic-optimizer and the wasm target installed on your machine.
 
-[Here is an example project you can use as a reference.](https://github.com/Psychedelic/cap-example/tree/jsonsivar/init)
+[Here is an empty Rust IC boilerplate you can get started with in this example:](https://github.com/Psychedelic/cap-example/tree/jsonsivar/init)
 
 ```rust
 cap-sdk = { git = "https://github.com/Psychedelic/cap.git", branch = "cap-sdk" }
