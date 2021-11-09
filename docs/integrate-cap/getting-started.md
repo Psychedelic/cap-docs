@@ -28,7 +28,9 @@ The following guide will take you through creating a sample project (NFT/Token) 
 
 The first step is to create a simple project. Here we will create an **empty Rust project**. Note: this assumes your machine is already set up for IC development. Please make sure you have dfx, ic-optimizer and the wasm target installed on your machine.
 
-[Here is an empty Rust IC boilerplate you can get started with in this example:](https://github.com/Psychedelic/cap-example/tree/jsonsivar/init)
+[Here is an empty Rust IC boilerplate you can get started with in this example:](https://github.com/Psychedelic/cap-example/tree/empty)
+
+You can clone this or fork it to start your own project.
 
 ```rust
 cap-sdk = { git = "https://github.com/Psychedelic/cap.git", branch = "cap-sdk" }
@@ -45,8 +47,8 @@ First, let’s create a constructor for this token so that in it, we will set up
 
 ```rust
 #[init]
-fn init(contract: Principal, writers: BTreeSet<Principal>) {
-	
+fn init() {
+ 
 }
 ```
 
@@ -54,17 +56,8 @@ Then, we will create a canister and register it with the CAP This can be done us
 
 ```rust
 fn init(cycles: u64) {
-   let arg = management::CreateCanisterArgument { settings: None };
-   let (res,) = management::CreateCanister::perform_with_payment(
-       Principal::management_canister(),
-       (arg,),
-       cycles,
-   )
-   .await
-   .expect("Failed to create the canister.");
-   let canister_id = res.canister_id;
- 
-  // … add new sdk function 
+   let data = ic::get_mut::<Data>();
+   data.owner = ic::caller();
 }
 ```
 
@@ -76,22 +69,74 @@ Root canisters (transaction histories) are created for each token that wants to 
 
 Now, let’s insert events.  For the purposes of this example, let’s create 2 simple functions, mint and transfer that will let users mint and transfer their tokens respectively.
 
-```
-Insert code that shows an simple mint and transfer function
+```rust
+#[update(name = "mint")]
+#[candid_method(update)]
+pub async fn mint(owner: Principal) -> u64 {
+ 
+}
+ 
+#[update(name = "transfer")]
+#[candid_method(update)]
+pub async fn transfer(new_owner: Principal, token_id: u64) {
+ 
+}
 ```
 
 Now, we can use the insert helper from the SDK to add events to CAP:
 
-```
-Insert code that calls insert on SDK for mint
+```rust
+#[update(name = "mint")]
+#[candid_method(update)]
+pub async fn mint(owner: Principal) -> u64 {
+ 
+	// other stuff
+	
+let transaction_details = MintDetails {
+       owner: owner,
+       token_id,
+       cycles: available,
+   };
+ 
+   data.nft_owners.insert(transaction_details.token_id, owner);
+ 
+   data.next_id += 1;
+ 
+   let event = IndefiniteEventBuilder::new()
+       .caller(ic::caller())
+       .operation(String::from("mint"))
+       .details(transaction_details)
+       .build()
+       .unwrap();
+ 
+   insert(event).await.unwrap();
+}
 ```
 
 Let’s take a look at that payload we inserted.  The fields in the first level are common fields to all CAP events. The details field is where we let you add any number of fields that are unique to your application.  
 
 In this case we are capturing a mint so we want to capture things like who the token should be assigned to, and the token ID. Similarly, you can do an insert for the transfer function as well. Note the different fields this time:
 
-```
-Insert code that calls insert on SDK for mint
+```rust
+#[update(name = "transfer")]
+#[candid_method(update)]
+pub async fn transfer(new_owner: Principal, token_id: u64) {
+    // other stuff
+ 
+   let transaction_details = TransferDetails {
+       to: new_owner,
+       token_id: token_id,
+   };
+ 
+   let event = IndefiniteEventBuilder::new()
+       .caller(ic::caller())
+       .operation(String::from("transfer"))
+       .details(transaction_details)
+       .build()
+       .unwrap();
+ 
+   insert(event).await.unwrap();
+}
 ```
 
 The idea is that you can add these inserts anywhere in your code whenever there is an event you want to capture and query later.
@@ -109,15 +154,38 @@ Also do note, this is an alpha release of CAP and it is subject to heavy develop
 
 Now when it comes to querying these events, the SDK also provides helper functions you can use.  Let’s create a simple function that will return a specific event. This is a simple wrapper on the get_transaction call to demonstrate how it’s used. It basically looks up a transaction in CAP and returns the details.
 
-```
-Insert code that shows an simple get transaction function
+```rust
+#[candid_method(update)]
+#[update(name = "get_transaction_by_id")]
+pub async fn get_transaction_by_id(id: u64) -> Event {
+ 
+}
 ```
 
 Similarly, there are other query functions that let you get all transactions, or just the transactions for a user that you can use.
 
+```rust
+#[candid_method(update)]
+#[update(name = "get_transaction_by_id")]
+pub async fn get_transaction_by_id(id: u64) -> Event {
+   let ctx = get_context();
+ 
+   let result = get_transaction(id).await;
+ 
+   let tx = match result {
+       Ok(t) => t,
+       Err(e) => {
+           panic!("Error finding transactions.");
+       }
+   };
+ 
+   tx
+}
 ```
-Maybe some more examples for querying?
-```
+
+This highlights the main interactions with CAP. But there are helpers and other data structures that are needed to make this work. You can find them all in a full working example here: 
+
+https://github.com/Psychedelic/cap/tree/docs/example/canisters/sdk_example
 
 ### Querying Events/Transactions from CAP Directly
 
