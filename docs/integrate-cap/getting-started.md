@@ -20,7 +20,7 @@ To integrate CAP, a Token or NFT must use the **CAP SDK**. A development kit we 
 
 The following guide will take you through creating a sample project (NFT/Token) that uses **CAP for its event history**. It will create a simple token that registers with CAP and then submits and retrieves events. It is recommended that you read the CAP specifications to understand how CAP works. 
 
-- That can be found here https://github.com/Psychedelic/cap/tree/main/spec
+- **That can be found here **https://github.com/Psychedelic/cap/tree/main/spec
 
 ----
 
@@ -30,7 +30,7 @@ The first step is to create a simple project. Here we will create an **empty Rus
 
 [Here is an empty Rust IC boilerplate you can get started with in this example:](https://github.com/Psychedelic/cap-example/tree/empty)
 
-You can clone this or fork it to start your own project.
+You can clone this or fork it to start your own project. **Alternatively, if you want to see the finished example and not just excerpts,** [visit the final version.](https://github.com/Psychedelic/cap/tree/docs/example/canisters/sdk_example)
 
 ```rust
 cap-sdk = { git = "https://github.com/Psychedelic/cap.git", branch = "cap-sdk" }
@@ -183,9 +183,7 @@ pub async fn get_transaction_by_id(id: u64) -> Event {
 }
 ```
 
-This highlights the main interactions with CAP. But there are helpers and other data structures that are needed to make this work. You can find them all in a full working example here: 
-
-https://github.com/Psychedelic/cap/tree/docs/example/canisters/sdk_example
+This highlights the main interactions with CAP. But there are helpers and other data structures that are needed to make this work. You can find them all in a **full working example here:** https://github.com/Psychedelic/cap/tree/docs/example/canisters/sdk_example
 
 ### Querying Events/Transactions from CAP Directly
 

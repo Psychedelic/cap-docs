@@ -7,10 +7,7 @@ date: "1"
 
 Welcome to CAP's documentation. CAP is an open internet service providing transaction history & asset provenance for NFTs & Tokens on the Internet Computer. It solves the huge IC problem that assets don’t have native transaction history, and does so in a scalable, trustless and seamless way so any NFT/Token can integrate with one line of code.
 
-CAP provides services to:
-
-1. NFTs/Tokens developers by giving them a plug-n-play history for their assets.
-2. UIs/Dapps/Sites on the Internet Computer that want to show an asset's history to users.
+CAP provides services to... NFTs/Tokens developers by giving them a plug-n-play history for their assets and UIs/Dapps/Sites on the Internet Computer that want to show an asset's history to users.
 
 
 - Visit [our website](https://cap.ooo)

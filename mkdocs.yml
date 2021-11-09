@@ -26,7 +26,7 @@ nav:
   - Welcome to CAP 👋: index.md
   - <b>Overview</b> 👑: "#"
   - What is CAP?: overview/what-is-cap.md
-  - <b>Integrate to NFT/Token</b> ⚡: "#"
+  - <b>Integrate an NFT/Token</b> ⚡: "#"
   - CAP SDK - Getting Started: integrate-cap/getting-started.md
   - <b>Show CAP Data in UI/Apps</b> 📜: "#"
   - CAP JS - Getting Started: surface-data/getting-started.md
