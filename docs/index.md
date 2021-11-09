@@ -5,7 +5,7 @@ date: "1"
 
 ![](imgs/mainn.png)
 
-Welcome to CAP's documentation. CAP is an open internet service providing transaction history & asset provenance for NFT’s & Tokens on the Internet Computer. It solves the huge IC problem that assets don’t have native transaction history, and does so in a scalable, trustless and seamless way so any NFT/Token can integrate with one line of code.
+Welcome to CAP's documentation. CAP is an open internet service providing transaction history & asset provenance for NFTs & Tokens on the Internet Computer. It solves the huge IC problem that assets don’t have native transaction history, and does so in a scalable, trustless and seamless way so any NFT/Token can integrate with one line of code.
 
 CAP provides services to:
 
