@@ -32,7 +32,7 @@ nav:
   - CAP JS - Getting Started: surface-data/getting-started.md
   - <b>Examples & Tools</b> 🧰: "#"
   - CAP Main Repo: "https://github.com/psychedelic/cap"
-  - CAP SDK Repo: "https://github.com/Psychedelic/cap/tree/cap-sdk/sdk"
+  - CAP SDK Repo: "https://github.com/Psychedelic/cap/tree/main/sdk"
   - CAP-js Repo: "https://github.com/psychedelic/cap-js"
   - <b>Resources</b> 📚:
     - The Internet Computer: "https://dfinity.org/faq"

@@ -13,7 +13,7 @@ CAP provides services to... NFTs/Tokens developers by giving them a plug-n-play 
 - Visit [our website](https://cap.ooo)
 - Read [our announcement](https://medium.com/@cap_ois/db9bdfe9129f?source=friends_link&sk=924b190ea080ed4e4593fc81396b0a7a)
 - Visit [CAP's main repository](https://github.com/psychedelic/cap) 
-- Visit [CAP-SDK repository](https://github.com/Psychedelic/cap/tree/cap-sdk/sdk)
+- Visit [CAP-SDK repository](https://github.com/Psychedelic/cap/tree/main/sdk)
 - Visit [CAP-JS repository](https://github.com/psychedelic/cap-js) 
 
 

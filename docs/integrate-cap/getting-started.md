@@ -6,7 +6,7 @@ date: "1"
 
 To integrate CAP, a Token or NFT must use the **CAP SDK**. A development kit we created to facilitate the integration of **new or existing projects**.
 
-- Visit [CAP-SDK repository](https://github.com/Psychedelic/cap/tree/cap-sdk/sdk)
+- Visit [CAP-SDK repository](https://github.com/Psychedelic/cap/tree/main/sdk)
 - CAP's Mainnet canister: `lj532-6iaaa-aaaah-qcc7a-cai`
 
 !!! Important
