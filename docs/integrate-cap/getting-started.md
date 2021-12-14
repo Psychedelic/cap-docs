@@ -56,8 +56,15 @@ Then, we will create a canister and register it with the CAP This can be done us
 
 ```rust
 fn init(cycles: u64) {
-   let data = ic::get_mut::<Data>();
-   data.owner = ic::caller();
+   // Handshake with a mock cap, we are assuming the first deployed canister
+   // on your local is used for Cap.
+   // In the real world when you're deploying a real bucket canister, you should
+   // put a higher amount of creation cycles, we recommend 10TC, and use None for the target canister so it uses the default mainnet canister ID
+   cap_sdk::handshake(
+       1_000_000_000_000,
+       Some(Principal::from_str("rrkah-fqaaa-aaaaa-aaaaq-cai").unwrap()),
+   );
+ 
 }
 ```
 
