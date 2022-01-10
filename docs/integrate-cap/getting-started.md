@@ -1,21 +1,22 @@
 ---
 date: "1"
 ---
-# ⚡ Integrating CAP - New & Existing Projects
-## ⚡ Integrating CAP - New & Existing Projects
+# ⚡ Integrating CAP - Rust-based Projects
+## ⚡ Integrating CAP - Rust-based Projects
 
-To integrate CAP, a Token or NFT must use the **CAP SDK**. A development kit we created to facilitate the integration of **new or existing projects**.
+To integrate CAP, a Token or NFT must use the **CAP Rust SDK**. A development kit we created to facilitate the integration of **new or existing projects written in Rust**.
 
-- Visit [CAP-SDK repository](https://github.com/Psychedelic/cap/tree/main/sdk)
+- Visit [CAP Rust SDK repository](https://github.com/Psychedelic/cap/tree/main/sdk)
 - CAP's Mainnet canister: `lj532-6iaaa-aaaah-qcc7a-cai`
-
-!!! Important
-
-    This is an early version of the documentation! 🚧 we will continue to grow this with examples and guides as the SDK and CAP itself is being developed.
-
 
 -----
 
+The following guide will take you through creating a sample project (NFT/Token) that uses **CAP for its event history**. It will create a simple token that registers with CAP and then submits and retrieves events. It is recommended that you read the CAP specifications to understand how CAP works. 
+
+- **That can be found here **https://github.com/Psychedelic/cap/tree/main/spec
+
+
+----
 
 
 The following guide will take you through creating a sample project (NFT/Token) that uses **CAP for its event history**. It will create a simple token that registers with CAP and then submits and retrieves events. It is recommended that you read the CAP specifications to understand how CAP works. 
