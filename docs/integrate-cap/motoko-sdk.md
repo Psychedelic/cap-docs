@@ -91,7 +91,7 @@ Copy the `<Application Token Contract ID>` because you are going to use it to se
 
 Now, we need to push our example source code to CAP! For that we have a `handshake` process that creates a new Root canister for us, with the right controller.
 
-For our example, we're going to use the [DFX CLI]() to call a method in our example application actor, called `init`
+For our example, we're going to use the [DFX CLI](https://smartcontracts.org/docs/developers-guide/cli-reference.html) to call a method in our example application actor, called `init`
 
 ```sh
 dfx canister call <Application Token Contract ID> init "()"
