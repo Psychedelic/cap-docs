@@ -19,7 +19,7 @@ The following guide will take you through creating a sample project (NFT/Token) 
 
 ## 🦖 CAP Motoko Library Integration Example
 
-This example guides you towards deploying a Motoko-based canister that integrates CAP to have a transaction/event history, using the CAP Motoko Library to both instantiate a history in CAP for your canister, and adding the appropiate "insert" methods to send event records to CAP.
+This example guides you towards deploying a Motoko-based canister that integrates CAP to have a transaction/event history, using the CAP Motoko Library to both instantiate a history in CAP for your canister, and adding the appropriate "insert" requests to send event records to CAP.
 
 With this guide you will:
 
