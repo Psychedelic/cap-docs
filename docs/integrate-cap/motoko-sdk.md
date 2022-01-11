@@ -105,9 +105,9 @@ It should take a bit, and once completed you'll find the output it similar to:
 
 Where `()` is the returned value, if we did NOT get any errors during the process handling!
 
-### 3. Test the History by Making a Call to Insert an Event
+## 3. Test the History by Making a Call to Insert an Event
 
-From then on we can simple use the remaining methods available, such as `insert`. This means that we do the initialisation only once and NOT everytime we need to make a CAP call.
+From then on we can simple use the remaining methods available, such as `insert`. This means that we do the initialisation only once and NOT everytime we need to make a Cap call.
 
 To complete, we execute the `insert` to push some data to our Root bucket for our `<Application Token Contract ID>` example application.
 
@@ -121,11 +121,13 @@ Here's how it looks:
 (variant { ok = 0 : nat64 })
 ```
 
-The `(variant { ok = 0 : nat64 })` is a wrapped response of the expected returned value, the transaction id as `nat64` (starts at zero), as we can verify by looking at the [Candid](https://github.com/Psychedelic/cap/blob/main/candid/root.did#L57) for CAP Root. It's wrapped by our example `insert` method.
+The `(variant { ok = 0 : nat64 })` is a wrapped response of the expected returned value, the transaction id as `nat64` (starts at zero), as we can verify by looking at the [Candid](https://github.com/Psychedelic/cap/blob/main/candid/root.did#L57) for Cap Root. It's wrapped by our example `insert` method.
 
-👋 That's it! You can now use the CAP Motoko Library in your local replica and the same knowledge can be applied to deploy to the [mainnet](#-deploying-the-examples-to-mainnet)!
+👋 That's it! You can now use the Cap Motoko Library in your local replica and the same knowledge can be applied to deploy to the [mainnet](#-deploying-the-examples-to-mainnet)!
 
-## 🚀 Deploying the Examples to Mainnet
+# 🚀 Deploying the examples to mainnet
+
+## 1. Deploy to mainnet
 
 We start by deploying to the Mainnet by using the flag `--network ic`, and omit the constructor argument which is used locally to override the Mainnet Router ID. By setting `null`, we cause the constructor to use the Router ID Mainnet.
 
@@ -143,10 +145,9 @@ Deployed canisters.
 
 Copy the `<Application Token Contract Id>`, as it's needed for initialisation.
 
-### 2. Initialize CAP in Your Mainnet Canister
+## 2. Initialize CAP in Your Mainnet Canister
 
-
-The initialisation is the process that calls the CAP `handshake` endpoint to create root/history canister in CAP for your project. Your events will be stored in this canister exclusively.
+The initialisation is the process that calls the Cap `handshake` endpoint:
 
 ```sh
 dfx canister --network ic call <Application Token Contract Id> init "()"
@@ -158,7 +159,7 @@ It should take a bit, and once completed you'll find the output it similar to:
 ()
 ```
 
-### 3. Test Your Mainnet Canister, Call a Method and Insert Data
+## 3. Call a Method and Insert Data
 
 From then on we can simple use the remaining methods available, such as `insert`. The same principals we found in the local replica apply here, so we only need to call the initialisation once.
 
@@ -174,4 +175,47 @@ Here's how the output looks (e.g. if you request a new `insert`, then the ok num
 (variant { ok = 0 : nat64 })
 ```
 
-👋 Well done!
+## 4. Verify the transactions in the Root bucket
+
+First, we call the Router `get_token_contract_root_bucket`, that'll provide us the history canister or Root canister:
+
+```sh
+dfx canister --network ic call <Router ID> get_token_contract_root_bucket "( record { witness = (false:bool); canister = principal \"<Application Token Contract ID>\" } )"
+```
+
+We then call the `<Root ID>` `get_transactions` to retrieve all the transactions:
+
+```sh
+dfx canister --network ic call <Root ID> get_transactions "( record { witness = (false:bool) } )"
+```
+
+Here's how the output looks like for two transactions in the history:
+
+```js
+(
+  record {
+    1_113_806_378 = vec {
+      record {
+        1_291_635_725 = 1_641_904_752_498 : nat64;
+        2_688_582_695 = "transfer";
+        2_874_596_546 = vec {
+          record { "key"; variant { 936_573_133 = "value" } };
+        };
+        3_068_679_307 = principal "6vj5p-imd5n-7gtwg-fskuc-bvuqy-65j54-xxdqw-gxikv-rkw4u-ocrmb-dqe";
+      };
+      record {
+        1_291_635_725 = 1_641_904_807_109 : nat64;
+        2_688_582_695 = "transfer";
+        2_874_596_546 = vec {
+          record { "key"; variant { 936_573_133 = "value" } };
+        };
+        3_068_679_307 = principal "6vj5p-imd5n-7gtwg-fskuc-bvuqy-65j54-xxdqw-gxikv-rkw4u-ocrmb-dqe";
+      };
+    };
+    1_246_878_287 = 0 : nat32;
+    1_668_342_201 = null;
+  },
+)
+```
+
+👋 Well done! You've succesfully deployed a Canister to the mainnet, inserted some event data and retrieved the event transactions!
