@@ -27,12 +27,14 @@ nav:
   - <b>Overview</b> 👑: "#"
   - What is CAP?: overview/what-is-cap.md
   - <b>Integrate an NFT/Token</b> ⚡: "#"
-  - CAP SDK - Getting Started: integrate-cap/getting-started.md
+  - Rust SDK - Getting Started: integrate-cap/getting-started.md
+  - Motoko SDK - Getting Started: integrate-cap/motoko-sdk.md
   - <b>Show CAP Data in UI/Apps</b> 📜: "#"
   - CAP JS - Getting Started: surface-data/getting-started.md
   - <b>Examples & Tools</b> 🧰: "#"
-  - CAP Main Repo: "https://github.com/psychedelic/cap"
-  - CAP SDK Repo: "https://github.com/Psychedelic/cap/tree/main/sdk"
+  - Main Repo: "https://github.com/psychedelic/cap"
+  - Rust SDK : "https://github.com/Psychedelic/cap/tree/main/sdk"
+  - Motoko SDK: "https://github.com/Psychedelic/cap-motoko-library"
   - CAP-js Repo: "https://github.com/psychedelic/cap-js"
   - <b>Resources</b> 📚:
     - The Internet Computer: "https://dfinity.org/faq"

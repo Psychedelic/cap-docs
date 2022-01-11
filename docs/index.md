@@ -5,7 +5,7 @@ date: "1"
 
 ![](imgs/mainn.png)
 
-Welcome to CAP's documentation. CAP is an open internet service providing transaction history & asset provenance for NFTs & Tokens on the Internet Computer. It solves the huge IC problem that assets don’t have native transaction history, and does so in a scalable, trustless and seamless way so any NFT/Token can integrate with one line of code.
+Welcome to CAP's documentation. CAP is an open internet service providing transaction history & asset provenance for NFTs & Tokens on the Internet Computer. It solves the huge IC problem that assets don’t have native transaction history, and does so in a scalable, trustless and seamless way so that any NFT/Token can integrate with one line of code.
 
 CAP provides services to... NFTs/Tokens developers by giving them a plug-n-play history for their assets and UIs/Dapps/Sites on the Internet Computer that want to show an asset's history to users.
 
@@ -13,7 +13,8 @@ CAP provides services to... NFTs/Tokens developers by giving them a plug-n-play 
 - Visit [our website](https://cap.ooo)
 - Read [our announcement](https://medium.com/@cap_ois/db9bdfe9129f?source=friends_link&sk=924b190ea080ed4e4593fc81396b0a7a)
 - Visit [CAP's main repository](https://github.com/psychedelic/cap) 
-- Visit [CAP-SDK repository](https://github.com/Psychedelic/cap/tree/main/sdk)
+- Visit [Rust-SDK repository](https://github.com/Psychedelic/cap/tree/main/sdk)
+- Visit [Motoko-SDK repository](https://github.com/Psychedelic/cap-motoko-library)
 - Visit [CAP-JS repository](https://github.com/psychedelic/cap-js) 
 
 
@@ -39,7 +40,8 @@ CAP as an open internet service works the following way. The main canister for C
 
 Looking to integrate CAP to an NFT or Token to give it a transaction/activity history in CAP? 
 
-1. [Get started with the CAP SDK.](https://docs.cap.ooo/integrate-cap/getting-started/)
+1. [Get started with the Rust SDK.](https://docs.cap.ooo/integrate-cap/getting-started/)
+2. [Get started with the Motoko SDK.](https://docs.cap.ooo/integrate-cap/motoko-sdk/)
 
 ### 📈 Integrating CAP to an UI/App to Show an Assets History/Activity.
 
