@@ -121,7 +121,11 @@ That's the cool thing. Instead of having to interact/integrate them individually
 The Router will respond all the available histories based on what you asked; and you will be able to interact now with each history (Root) to get specific transaction data.
 
 #### get_index_canisters( );
-Returns all available history canisters (Roots) for all NFTs/Tokens using CAP.
+Returns the `Indexes`, which relates to `Router`, as the index interface (which is currently only implemented by Router canister) is responsible for storing things such as:
+1. The root bucket for each canister using Cap
+2. The root buckets for a certain user
+3. ID of all the other Index canisters 
+It basically exists to allow Cap to expand it's routing mechanism to more than one subnet in future if it becomes a need (data replication/load balancing)
 
 - `witness`: The optional Certified response, defaults to false.
 
