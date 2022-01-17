@@ -98,10 +98,10 @@ Now, we can use the insert helper from the SDK to add events to CAP:
 #[candid_method(update)]
 pub async fn mint(owner: Principal) -> u64 {
  
-	// other stuff
+   // other stuff
 	
-let transaction_details = MintDetails {
-       owner: owner,
+   let transaction_details = MintDetails {
+       to: owner,
        token_id,
        cycles: available,
    };
