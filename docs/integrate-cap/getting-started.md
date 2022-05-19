@@ -13,7 +13,7 @@ To integrate CAP, a Token or NFT must use the **CAP Rust SDK**. A development ki
 
 The following guide will take you through creating a sample project (NFT/Token) that uses **CAP for its event history**. It will create a simple token that registers with CAP and then submits and retrieves events. It is recommended that you read the CAP specifications to understand how CAP works. 
 
-- **That can be found here **https://github.com/Psychedelic/cap/tree/main/spec
+- **That can be found [here](https://github.com/Psychedelic/cap/tree/main/spec) **
 
 
 ----
@@ -21,7 +21,7 @@ The following guide will take you through creating a sample project (NFT/Token) 
 
 The following guide will take you through creating a sample project (NFT/Token) that uses **CAP for its event history**. It will create a simple token that registers with CAP and then submits and retrieves events. It is recommended that you read the CAP specifications to understand how CAP works. 
 
-- **That can be found here **https://github.com/Psychedelic/cap/tree/main/spec
+- **That can be found [here](https://github.com/Psychedelic/cap/tree/main/spec) **
 
 ----
 
@@ -148,6 +148,29 @@ pub async fn transfer(new_owner: Principal, token_id: u64) {
 ```
 
 The idea is that you can add these inserts anywhere in your code whenever there is an event you want to capture and query later.
+
+### Batch Transactions 👯‍♂️
+
+In order to increase the throughput of transactions that can be inserted into a Root Bucket through a single inter-canister call, we've created the `insert_many` method.
+
+`insert_many` works in the exact same way as `insert` does, however its payload can be made up of an array of transactions. 
+
+```rust
+
+```
+
+
+### Failure Resistant Insertions ✅
+
+A Root Bucket's transaction integrity is only as good as the main canister's ability to handle errors. For this reason, we have `insert_sync` and `insert_many_sync`. These methods won't slow you canister down, **they are not asynchronous**, they don't have to await a response because they know how to handle all responses. Here's how that looks in pracice: 
+
+```rust
+
+```
+
+With both methods, any failed insertions (from an out of cycles canister, for example) are indexed and saved to the main canister's heap storage. This transaction(s) will stay in storage until another `insert_sync` or `insert_many_sync` method is called, at which point the saved transactions will be flushed out of storage, bundled together with the new transactions as a batch transaction, and sent off to the Root Bucket as intended. 
+
+Multiple failed insertions preserves the order of transactions, thereby maintaining the integretity of the Root Bucket's transaction history.
 
 ## Maintenance of One’s History in CAP 🔋
 
