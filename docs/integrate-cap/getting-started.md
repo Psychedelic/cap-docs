@@ -34,8 +34,8 @@ The first step is to create a simple project. Here we will create an **empty Rus
 You can clone this or fork it to start your own project. **Alternatively, if you want to see the finished example and not just excerpts,** [visit the final version.](https://github.com/Psychedelic/cap/tree/docs/example/canisters/sdk_example)
 
 ```rust
-cap-sdk = { git = "https://github.com/Psychedelic/cap.git", branch = "cap-sdk" }
-cap-sdk-core = { git = "https://github.com/Psychedelic/cap.git", branch = "cap-sdk" }
+cap-sdk = "0.2.3"
+cap-sdk-core = "0.2.2"
 ```
 
 Note, currently it is under development so we are pointing to the **Github version**. Once it is published, you can point directly to the published crate.
