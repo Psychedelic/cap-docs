@@ -156,7 +156,37 @@ In order to increase the throughput of transactions that can be inserted into a 
 `insert_many` works in the exact same way as `insert` does, however its payload can be made up of an array of transactions. 
 
 ```rust
-
+#[update(name = "transfer")]
+#[candid_method(update)]
+pub async fn mint_and_transfer(token_id: u64, new_owner: Prinicpal) {
+    // other stuff
+ 
+    let mint_details = TransferDetails {
+       to: new_owner,
+       token_id: token_id,
+   };
+ 
+   let mint_event = IndefiniteEventBuilder::new()
+       .caller(ic::caller())
+       .operation(String::from("mint"))
+       .details(mint_details)
+       .build()
+       .unwrap();
+ 
+   let transfer_details = TransferDetails {
+       to: new_owner,
+       token_id: token_id,
+   };
+ 
+   let transfer_event = IndefiniteEventBuilder::new()
+       .caller(ic::caller())
+       .operation(String::from("transfer"))
+       .details(transfer_details)
+       .build()
+       .unwrap();
+ 
+   insert_many(vec![mint_event, transfer_event]).await.unwrap();
+}
 ```
 
 
@@ -165,7 +195,26 @@ In order to increase the throughput of transactions that can be inserted into a 
 A Root Bucket's transaction integrity is only as good as the main canister's ability to handle errors. For this reason, we have `insert_sync` and `insert_many_sync`. These methods won't slow you canister down, **they are not asynchronous**, they don't have to await a response because they know how to handle all responses. Here's how that looks in pracice: 
 
 ```rust
-
+#[update(name = "transfer")]
+#[candid_method(update)]
+// Notice that we removed the async keyword here, our method doesn't need to be async anymore.
+pub fn transfer(new_owner: Principal, token_id: u64) {
+    // other stuff
+ 
+   let transaction_details = TransferDetails {
+       to: new_owner,
+       token_id: token_id,
+   };
+ 
+   let event = IndefiniteEventBuilder::new()
+       .caller(ic::caller())
+       .operation(String::from("transfer"))
+       .details(transaction_details)
+       .build()
+       .unwrap();
+ 
+   insert_sync(event);
+}
 ```
 
 With both methods, any failed insertions (from an out of cycles canister, for example) are indexed and saved to the main canister's heap storage. This transaction(s) will stay in storage until another `insert_sync` or `insert_many_sync` method is called, at which point the saved transactions will be flushed out of storage, bundled together with the new transactions as a batch transaction, and sent off to the Root Bucket as intended. 
