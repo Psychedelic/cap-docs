@@ -52,18 +52,6 @@ Displaying historic data of an asset (e.g. NFT's past sales and transfers); show
 
 - [Get started with the CAP-js library.](https://docs.cap.ooo/surface-data/getting-started/)
 
-
-## 👑 Moonwalkers, Portal, and other Early Supporters
-
-We are kickstarting the CAP ecosystem with a group of early Tokens & NFTs that will be integrating CAP to give their NFTs/Token an activity history!
-
-- [Moonwalkers (NFTs)](https://twitter.com/ic_gallery)
-- [Portal (NFTs)](https://portal.one/)
-- [DFinance (Tokens)](https://dfinance.ai/)
-- [Cycles Token (Tokens)](https://dank.ooo/xtc/)
-- [ICSnakes (NFTs)](https://xn--4n8h7h.ws/)
-- [ICPSquad (NFTs)](https://twitter.com/ICPSquadNFT)
-
 ## 🔌 Plug's Integration and Role
 
 As for **Plug's integration**, it isn't only to show users the transaction history of tokens/NFTs in their wallet that support Plug. 
